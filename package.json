@@ -1,0 +1,24 @@
+{
+  "name": "solatido-theme",
+  "displayName": "Solatido Theme",
+  "description": "The official solatido visual studio code theme.",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.81.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "scripts": {
+    "watch": "node build"
+ },
+  "contributes": {
+    "themes": [
+      {
+        "label": "Solatido Theme",
+        "uiTheme": "vs-dark",
+        "path": "./themes/solatido-theme.json"
+      }
+    ]
+  }
+}
