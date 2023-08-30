@@ -8,6 +8,7 @@
 
 - Added quick picker section
 - Added debug section
+- Added panel section
 
 ## 0.0.3
 

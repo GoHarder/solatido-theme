@@ -22,7 +22,7 @@ local sections =
   (import './editor_widget.libsonnet') +
   // peek_view
   // merge_conflicts
-  // pannel
+  (import './panel.libsonnet') +
   (import './status_bar.libsonnet') +
   (import './title_bar.libsonnet') +
   (import './menu_bar.libsonnet') +
