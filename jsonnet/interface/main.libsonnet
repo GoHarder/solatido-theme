@@ -27,25 +27,25 @@ local sections =
   (import './title_bar.libsonnet') +
   (import './menu_bar.libsonnet') +
   (import './command_center.libsonnet') +
-// notification
-// banner
-// extension
-// quick_picker
-// keybinding_label
-// keyboard_shortcut_table
-// integrated_terminal
-// debug
-// testing
-// welcome_page
-// source_control
-  (import './git.libsonnet');
-// settings_editor
-// breadcrumbs
-// snippets
-// symbol_icons
-// debug_icons
-// notebook
-// chart
+  // notification
+  // banner
+  // extension
+  // quick_picker
+  // keybinding_label
+  // keyboard_shortcut_table
+  // integrated_terminal
+  // debug
+  // testing
+  // welcome_page
+  // source_control
+  (import './git.libsonnet') +
+  // settings_editor
+  // breadcrumbs
+  // snippets
+  // symbol_icons
+  // debug_icons
+  // notebook
+  // chart
   (import './ports.libsonnet');
 // comments_view
 
