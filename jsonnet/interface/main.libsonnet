@@ -38,7 +38,7 @@ local sections =
 // testing
 // welcome_page
 // source_control
-// git
+  (import './git.libsonnet');
 // settings_editor
 // breadcrumbs
 // snippets
