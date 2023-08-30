@@ -34,7 +34,7 @@ local sections =
   // keybinding_label
   // keyboard_shortcut_table
   // integrated_terminal
-  // debug
+  (import './debug.libsonnet') +
   // testing
   // welcome_page
   // source_control

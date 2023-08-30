@@ -27,6 +27,8 @@
       "commandCenter.background": "#121212",
       "commandCenter.border": "#444444",
       "commandCenter.inactiveBorder": "#444444",
+      "debugToolBar.background": "#1c1c1c",
+      "debugToolBar.border": "#444444",
       "descriptionForeground": "#d0d0d0b3",
       "diffEditor.border": "#444444",
       "diffEditor.diagonalFill": "#bcbcbc33",
