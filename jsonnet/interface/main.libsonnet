@@ -19,7 +19,7 @@ local sections =
   (import './diff_editor.libsonnet') +
   // chat
   // inline_chat
-  // editor_widget
+  (import './editor_widget.libsonnet') +
   // peek_view
   // merge_conflicts
   // pannel
