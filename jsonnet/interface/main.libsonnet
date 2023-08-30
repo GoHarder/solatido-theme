@@ -43,7 +43,7 @@ local sections =
   (import './breadcrumbs.libsonnet') +
   // snippets
   // symbol_icons
-  // debug_icons
+  (import './debug_icons.libsonnet') +
   // notebook
   // chart
   (import './ports.libsonnet');
