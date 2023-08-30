@@ -2,17 +2,20 @@
   "name": "solatido-theme",
   "displayName": "Solatido Theme",
   "description": "The official solatido visual studio code theme.",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "publisher": "GoHarder",
+  "license": "MIT",
+  "icon": "icon.png",
+  "galleryBanner": {
+    "theme": "dark"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/GoHarder/solatido-theme"
   },
   "keywords": [
     "theme",
-    "dark theme",
-    "goharder",
-    "go harder",
+    "dark",
     "solatido"
   ],
   "engines": {
