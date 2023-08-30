@@ -30,7 +30,7 @@ local sections =
   (import './notification.libsonnet') +
   // banner
   // extension
-  // quick_picker
+  (import './quick_picker.libsonnet') +
   // keybinding_label
   // keyboard_shortcut_table
   // integrated_terminal
