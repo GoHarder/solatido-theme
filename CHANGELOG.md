@@ -10,6 +10,7 @@
 - Added debug section
 - Added panel section
 - Added debug icons section
+- Added chat section
 
 ## 0.0.3
 
