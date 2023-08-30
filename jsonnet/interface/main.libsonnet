@@ -40,7 +40,7 @@ local sections =
   // source_control
   (import './git.libsonnet') +
   // settings_editor
-  // breadcrumbs
+  (import './breadcrumbs.libsonnet') +
   // snippets
   // symbol_icons
   // debug_icons
