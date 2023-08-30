@@ -46,15 +46,11 @@ local sections =
   (import './debug_icons.libsonnet') +
   // notebook
   // chart
-  (import './ports.libsonnet');
-// comments_view
+  (import './ports.libsonnet') +
+  (import './comments_view.libsonnet');
 
 {
   [key]: sections[key]
   for key in std.objectFields(sections)
   if (sections[key] != 'null')
-} +
-{
-  'panel.background': '#121212',
-  'terminal.background': '#080808',
 }

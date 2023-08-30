@@ -11,6 +11,7 @@
 - Added panel section
 - Added debug icons section
 - Added chat section
+- Added comments view section
 
 ## 0.0.3
 
