@@ -2,7 +2,7 @@
   "name": "solatido-theme",
   "displayName": "Solatido Theme",
   "description": "The official solatido visual studio code theme.",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "publisher": "GoHarder",
   "repository": {
     "type": "git",
@@ -12,7 +12,8 @@
     "theme",
     "dark theme",
     "goharder",
-    "go harder"
+    "go harder",
+    "solatido"
   ],
   "engines": {
     "vscode": "^1.81.0"
@@ -21,6 +22,9 @@
     "Themes"
   ],
   "scripts": {
+    "install": "npm install -g vsce",
+    "package": "vsce package",
+    "publish": "vsce publish",
     "watch": "node build"
   },
   "contributes": {
