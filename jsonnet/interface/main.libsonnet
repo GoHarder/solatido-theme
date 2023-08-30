@@ -23,8 +23,8 @@ local sections =
   // peek_view
   // merge_conflicts
   // pannel
-  (import './status_bar.libsonnet');
-// title_bar
+  (import './status_bar.libsonnet') +
+  (import './title_bar.libsonnet') +
 // menu_bar
 // command_center
 // notification
