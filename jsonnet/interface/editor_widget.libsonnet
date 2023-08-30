@@ -72,7 +72,7 @@ local editorHoverWidget = {
   background: 'null',  // {theme: #1c1c1c}
 
   // Border color of the editor hover. {default: #454545}
-  border: pallet.focus2,
+  border: 'null',  // {theme: #626262}
 
   // Foreground color of the active item in the parameter hint.
   // {default: #2aaaff}

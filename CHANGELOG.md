@@ -12,6 +12,7 @@
 - Added debug icons section
 - Added chat section
 - Added comments view section
+- Removed blue border on the editor hover widget
 
 ## 0.0.3
 
