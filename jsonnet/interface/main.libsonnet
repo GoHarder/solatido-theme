@@ -27,7 +27,7 @@ local sections =
   (import './title_bar.libsonnet') +
   (import './menu_bar.libsonnet') +
   (import './command_center.libsonnet') +
-  // notification
+  (import './notification.libsonnet') +
   // banner
   // extension
   // quick_picker
