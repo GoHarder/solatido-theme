@@ -13,6 +13,7 @@
 - Added chat section
 - Added comments view section
 - Removed blue border on the editor hover widget
+- Added integrated terminal section
 
 ## 0.0.3
 

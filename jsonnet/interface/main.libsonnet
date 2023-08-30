@@ -33,7 +33,7 @@ local sections =
   (import './quick_picker.libsonnet') +
   // keybinding_label
   // keyboard_shortcut_table
-  // integrated_terminal
+  (import './integrated_terminal.libsonnet') +
   (import './debug.libsonnet') +
   // testing
   // welcome_page
