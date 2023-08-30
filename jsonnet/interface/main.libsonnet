@@ -26,7 +26,7 @@ local sections =
   (import './status_bar.libsonnet') +
   (import './title_bar.libsonnet') +
 // menu_bar
-// command_center
+  (import './command_center.libsonnet') +
 // notification
 // banner
 // extension
