@@ -25,7 +25,7 @@ local sections =
   // pannel
   (import './status_bar.libsonnet') +
   (import './title_bar.libsonnet') +
-// menu_bar
+  (import './menu_bar.libsonnet') +
   (import './command_center.libsonnet') +
 // notification
 // banner
