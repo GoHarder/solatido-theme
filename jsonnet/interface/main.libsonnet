@@ -46,7 +46,7 @@ local sections =
 // debug_icons
 // notebook
 // chart
-// ports
+  (import './ports.libsonnet');
 // comments_view
 
 {

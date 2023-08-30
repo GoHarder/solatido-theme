@@ -151,6 +151,7 @@
       "minimapSlider.background": "#76767633",
       "minimapSlider.hoverBackground": "#62626259",
       "panel.background": "#121212",
+      "ports.iconRunningProcessForeground": "#98bf66",
       "problemsErrorIcon.foreground": "#e75258",
       "problemsInfoIcon.foreground": "#50b9ff",
       "problemsWarningIcon.foreground": "#f8bd49",
