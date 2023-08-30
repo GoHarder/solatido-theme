@@ -12,8 +12,7 @@ local diffEditor = {
 
   // Color of the diff editor's diagonal fill. The diagonal fill is used in
   // side-by-side diff views. {default: #cccccc33}
-  // diagonalFill: pallet.mono148 + pallet.opacity20_0,
-  diagonalFill: 'null',  // TODO: Set diffEditor.diagonalFill
+  diagonalFill: pallet.mono188 + pallet.opacity20_0,
 
   // The border color for text that got moved in the diff editor.
   // {default: #8b8b8b9c}
@@ -21,40 +20,36 @@ local diffEditor = {
 
   // Background color for text that got inserted. The color must not be
   // opaque so as not to hide underlying decorations. {default: #9ccc2c33}
-  //   insertedTextBackground: pallet.valid5 + pallet.p16_2,
-  insertedTextBackground: 'null',  // TODO: Set diffEditor.insertedTextBackground
+  insertedTextBackground: pallet.green.sub3 + pallet.opacity16_2,
 
   // Background color for lines that got inserted. The color must not be
   // opaque so as not to hide underlying decorations. {default: #9bb95533}
-  //   insertedLineBackground: pallet.valid5 + pallet.p16_2,
-  insertedLineBackground: 'null',  // TODO: Set diffEditor.insertedLineBackground
+  insertedLineBackground: pallet.green.sub3 + pallet.opacity16_2,
 
   // Outline color for the text that got inserted. {default: null}
   insertedTextBorder: 'null',  // set with code default
 
   // Background color for text that got removed. The color must not be
   // opaque so as not to hide underlying decorations. {default: #ff000033}
-  // removedTextBackground: pallet.error3 + pallet.p16_2,
-  removedTextBackground: 'null',  // TODO: Set diffEditor.removedTextBackground
+  removedTextBackground: pallet.red.sub3 + pallet.opacity16_2,
 
   // Background color for lines that got removed. The color must not be
   // opaque so as not to hide underlying decorations. {default: #ff000033}
-  // removedLineBackground: pallet.error3 + pallet.p16_2,
-  removedLineBackground: 'null',  // TODO: Set diffEditor.removedLineBackground
+  removedLineBackground: pallet.red.sub3 + pallet.opacity16_2,
 
   // Outline color for text that got removed. {default: null}
   removedTextBorder: 'null',  // set with code default
 
   // The color of unchanged blocks in diff editor. {default: #3e3e3e}
-  unchangedRegionBackground: 'null',  // TODO: Set diffEditor.unchangedRegionBackground
+  unchangedRegionBackground: pallet.background2,
 
   // The foreground color of unchanged blocks in the diff editor.
   // {default: #a3a2a2}
-  unchangedRegionForeground: 'null',  // TODO: Set diffEditor.unchangedRegionForeground
+  unchangedRegionForeground: pallet.focus2,
 
   // The background color of unchanged code in the diff editor.
   // {default: #74747429}
-  unchangedCodeBackground: 'null',  // TODO: Set diffEditor.unchangedCodeBackground
+  unchangedCodeBackground: pallet.background2,
 };
 
 local diffEditorGutter = {
