@@ -1,278 +1,241 @@
 local default = {
   comment: {
-    _description: 'For comments.',
-
-    // line comments, we specialize further so that the type of comment
-    // start character(s) can be extracted from the scope.
+    _description: ['For comments.'],
     line: {
-      // // comment
-      'double-slash': {},
-      // -- comment
-      'double-dash': {},
-      // # comment
-      'number-sign': {},
-      // % comment
-      percentage: {},
-      // other types of line comments.
-      character: {},
+      _description: [
+        'line comments, we specialize further so that the type of comment',
+        'start character(s) can be extracted from the scope.',
+      ],
+      'double-slash': { _description: ['// comment'] },
+      'double-dash': { _description: ['-- comment'] },
+      'number-sign': { _description: ['# comment'] },
+      percentage: { _description: ['% comment'] },
+      character: { _description: ['Other types of line comments.'] },
     },
-    // multi-line comments like /* … */ and <!-- … -->.
     block: {
-      // embedded documentation.
-      documentation: {},
+      _description: ['Multi-line comments like /* … */ and <!-- … -->.'],
+      documentation: { _description: ['Embedded documentation.'] },
     },
   },
-  // various forms of constants.
   constant: {
-    // those which represent numbers, e.g. 42, 1.3f, 0x4AB1U.
-    numeric: {},
-    // those which represent characters, e.g. &lt;, \e, \031.
+    _description: ['Various forms of constants.'],
+    numeric: { _description: ['Those which represent numbers, e.g. 42, 1.3f, 0x4AB1U.'] },
     character: {
-      // escape sequences like \e would be constant.character.escape.
-      escape: {},
+      _description: [@'Those which represent characters, e.g. &lt;, \e, \031.'],
+      escape: { _description: [@'Escape sequences like \e would be constant.character.escape.'] },
     },
-    // constants (generally) provided by the language which are “special”
-    // like true, false, nil, YES, NO, etc.
-    language: {},
-    // other constants, e.g. colors in CSS.
-    other: {},
+    language: { _description: [
+      'Constants (generally) provided by the language which are “special”',
+      'like true, false, nil, YES, NO, etc.',
+    ] },
+    other: { _description: ['Other constants, e.g. colors in CSS.'] },
   },
-  // an entity refers to a larger part of the document, for example a
-  // chapter, class, function, or tag. We do not scope the entire entity as
-  // entity.* (we use meta.* for that). But we do use entity.* for the
-  // “placeholders” in the larger entity, e.g. if the entity is a chapter,
-  // we would use entity.name.section for the chapter title.
   entity: {
-    // we are naming the larger entity.
+    _description: [
+      'an entity refers to a larger part of the document, for example a',
+      'chapter, class, function, or tag. We do not scope the entire entity as',
+      'entity.* (we use meta.* for that). But we do use entity.* for the',
+      '“placeholders” in the larger entity, e.g. if the entity is a chapter,',
+      'we would use entity.name.section for the chapter title.',
+    ],
     name: {
-      // the name of a function.
-      'function': {},
-      // the name of a type declaration or class.
-      type: {},
-      // a tag name.
-      tag: {},
-      // the name is the name of a section/heading.
-      section: {},
+      _description: ['We are naming the larger entity.'],
+      'function': { _description: ['The name of a function.'] },
+      type: { _description: ['The name of a type declaration or class.'] },
+      tag: { _description: ['A tag name.'] },
+      section: { _description: ['The name is the name of a section/heading.'] },
     },
-    // other entities.
     other: {
-      // the superclass/baseclass name.
-      'inherited-class': {},
-      // the name of an attribute (mainly in tags).
-      'attribute-name': {},
+      _description: ['Other entities.'],
+      'inherited-class': { _description: ['The superclass/baseclass name.'] },
+      'attribute-name': { _description: ['The name of an attribute (mainly in tags).'] },
     },
   },
-  // stuff which is “invalid”.
-  invalid+: {
-    // illegal, e.g. an ampersand or lower-than character in HTML (which is
-    // not part of an entity/tag).
-    illegal+: {},
-    // for deprecated stuff e.g. using an API function which is deprecated
-    // or using styling with strict HTML.
-    deprecated+: {},
+  invalid: {
+    _description: ['Stuff which is “invalid”.'],
+    illegal: { _description: [
+      'Illegal, e.g. an ampersand or lower-than character in HTML (which is',
+      'not part of an entity/tag).',
+    ] },
+    deprecated: { _description: [
+      'For deprecated stuff e.g. using an API function which is deprecated',
+      'or using styling with strict HTML.',
+    ] },
   },
-  // keywords (when these do not fall into the other groups).
-  keyword+: {
-    // mainly related to flow control like continue, while, return, etc.
-    control+: {},
-    // operators can either be textual (e.g. or) or be characters.
-    operator+: {},
-    // other keywords.
-    other+: {},
+  keyword: {
+    _description: ['Keywords (when these do not fall into the other groups).'],
+    control: { _description: ['Mainly related to flow control like continue, while, return, etc.'] },
+    operator: { _description: ['Operators can either be textual (e.g. or) or be characters.'] },
+    other: { _description: ['Other keywords.'] },
   },
-  // this is for markup languages and generally applies to larger subsets
-  // of the text.
-  markup+: {
-    // underlined text.
-    underline+: {
-      // this is for links, as a convenience this is derived from
-      // markup.underline so that if there is no theme rule which
-      // specifically targets markup.underline.link then it will inherit
-      // the underline style.
-      link+: {},
+  markup: {
+    _description: [
+      'This is for markup languages and generally applies to larger subsets',
+      'of the text.',
+    ],
+    underline: {
+      _description: ['Underlined text.'],
+      link: { _description: [
+        'This is for links, as a convenience this is derived from',
+        'markup.underline so that if there is no theme rule which',
+        'specifically targets markup.underline.link then it will inherit',
+        'the underline style.',
+      ] },
     },
-    // bold text (text which is strong and similar should preferably be
-    // derived from this name).
-    bold+: {},
-    // a section header. Optionally provide the heading level as the next
-    // element, for example markup.heading.2.html for <h2>…</h2> in HTML.
-    heading+: {},
-    // italic text (text which is emphasized and similar should preferably
-    // be derived from this name).
-    italic+: {},
-    // list items.
-    list+: {
-      // numbered list items.
-      numbered+: {},
-      // unnumbered list items.
-      unnumbered+: {},
+    bold: { _description: [
+      'Bold text (text which is strong and similar should preferably be',
+      'derived from this name).',
+    ] },
+    heading: { _description: [
+      'A section header. Optionally provide the heading level as the next',
+      'element, for example markup.heading.2.html for <h2>…</h2> in HTML.',
+    ] },
+    italic: { _description: [
+      'Italic text (text which is emphasized and similar should preferably',
+      'be derived from this name).',
+    ] },
+    list: {
+      _description: ['List items.'],
+      numbered: { _description: ['Numbered list items.'] },
+      unnumbered: { _description: ['Unnumbered list items.'] },
     },
-    // quoted (sometimes block quoted) text.
-    quote+: {},
-    // text which is verbatim, e.g. code listings. Normally spell checking
-    // is disabled for markup.raw.
-    raw+: {},
-    // other markup constructs.
-    other+: {},
+    quote: { _description: ['Quoted (sometimes block quoted) text.'] },
+    raw: { _description: [
+      'Text which is verbatim, e.g. code listings. Normally spell checking',
+      'is disabled for markup.raw.',
+    ] },
+    other: { _description: ['Other markup constructs.'] },
   },
-  // the meta scope is generally used to markup larger parts of the document.
-  // For example the entire line which declares a function would be
-  // meta.function and the subsets would be storage.type,
-  // entity.name.function, variable.parameter etc. and only the latter would
-  // be styled. Sometimes the meta part of the scope will be used only to
-  // limit the more general element that is styled, most of the time meta
-  // scopes are however used in scope selectors for activation of bundle
-  // items. For example in Objective-C there is a meta scope for the
-  // interface declaration of a class and the implementation, allowing the
-  // same tab-triggers to expand differently, depending on context.
-  meta+: {},
-  // things relating to “storage”.
-  storage+: {
-    // the type of something, class, function, int, var, etc.
-    type+: {},
-    // a storage modifier like static, final, abstract, etc.
-    modifier+: {},
+  meta: {
+    _description: [
+      'The meta scope is generally used to markup larger parts of the document.',
+      'For example the entire line which declares a function would be',
+      'meta.function and the subsets would be storage.type,',
+      'entity.name.function, variable.parameter etc. and only the latter would',
+      'be styled. Sometimes the meta part of the scope will be used only to',
+      'limit the more general element that is styled, most of the time meta',
+      'scopes are however used in scope selectors for activation of bundle',
+      'items. For example in Objective-C there is a meta scope for the',
+      'interface declaration of a class and the implementation, allowing the',
+      'same tab-triggers to expand differently, depending on context.',
+    ],
   },
-  // strings.
-  string+: {
-    // quoted strings.
-    quoted+: {
-      // single quoted strings: 'foo'.
-      single+: {},
-      // double quoted strings: "foo".
-      double+: {},
-      // triple quoted strings: """Python""".
-      triple+: {},
-      // other types of quoting: $'shell', %s{...}.
-      other+: {},
+  storage: {
+    _description: ['Things relating to “storage”.'],
+    type: { _description: ['The type of something, class, function, int, var, etc.'] },
+    modifier: { _description: ['A storage modifier like static, final, abstract, etc.'] },
+  },
+  string: {
+    _description: ['Strings.'],
+    quoted: {
+      _description: ['Quoted strings.'],
+      single: { _description: ["Single quoted strings: 'foo'."] },
+      double: { _description: ['Double quoted strings: "foo".'] },
+      triple: { _description: ['Triple quoted strings: """Python""".'] },
+      other: { _description: ["Other types of quoting: $'shell', %s{...}."] },
     },
-    // for things like here-docs and here-strings.
-    unquoted+: {},
-    // strings which are “evaluated”: `date`, $(pwd).
-    interpolated+: {},
-    // regular expressions: /(\w+)/.
-    regexp+: {},
-    // other types of strings (should rarely be used).
-    other+: {},
+    unquoted: { _description: ['For things like here-docs and here-strings.'] },
+    interpolated: { _description: ['Strings which are “evaluated”: `date`, $(pwd).'] },
+    regexp: { _description: [@'Regular expressions: /(\w+)/.'] },
+    other: { _description: ['Other types of strings (should rarely be used).'] },
   },
-  // things provided by a framework or library should be below support.
-  support+: {
-    // functions provided by the framework/library. For example NSLog in
-    // Objective-C is support.function.
-    'function'+: {},
-    // when the framework/library provides classes.
-    class+: {},
-    // types provided by the framework/library, this is probably only used
-    // for languages derived from C, which has typedef (and struct). Most
-    // other languages would introduce new types as classes.
-    type+: {},
-    // constants (magic values) provided by the framework/library.
-    constant+: {},
-    // variables provided by the framework/library. For example NSApp in AppKit.
-    variable+: {},
-    // the above should be exhaustive, but for everything else use support.other.
-    other+: {},
+  support: {
+    _description: ['Things provided by a framework or library should be below support.'],
+    'function': { _description: [
+      'Functions provided by the framework/library. For example NSLog in',
+      'Objective-C is support.function.',
+    ] },
+    class: { _description: ['When the framework/library provides classes.'] },
+    type: { _description: [
+      'Types provided by the framework/library, this is probably only used',
+      'for languages derived from C, which has typedef (and struct). Most',
+      'other languages would introduce new types as classes.',
+    ] },
+    constant: { _description: ['Constants (magic values) provided by the framework/library.'] },
+    variable: { _description: ['Variables provided by the framework/library. For example NSApp in AppKit.'] },
+    other: { _description: ['The above should be exhaustive, but for everything else use support.other.'] },
   },
-  // variables. Not all languages allow easy identification (and thus markup) of these.
   variable: {
-    // when the variable is declared as the parameter.
-    parameter: {},
-    // reserved language variables like this, super, self, etc.
-    language: {},
-    // other variables, like $some_variables.
-    other: {},
+    _description: ['Variables. Not all languages allow easy identification (and thus markup) of these.'],
+    parameter: { _description: ['When the variable is declared as the parameter.'] },
+    language: { _description: ['Reserved language variables like this, super, self, etc.'] },
+    other: { _description: ['Other variables, like $some_variables.'] },
   },
 };
 
+local stringSub = { constant: { other: { placeholder: { _settings: { foreground: '#eeffff' } } } } };
+
 local theme = {
   comment: { _settings: { foreground: '#546e7a' } },
-  punctuation: {
-    definition: {
-      comment: { _settings: { foreground: '#546e7a' } },
+  constant: { other: { color: { _clash: [
+    { _settings: { foreground: '#ffffff' } },
+    { _settings: { foreground: '#89ddff' } },
+  ] } } },
+  entity: {
+    name: {
+      'function': {
+        _settings: { foreground: '#82aaff' },
+      },
+      tag: { _settings: { foreground: '#f07178' } },
     },
   },
-  string: {},
-  variable: { _settings: { foreground: '#eeffff' } },
+  invalid: {
+    _settings: { foreground: '#ff5370' },
+    illegal: { _settings: { foreground: '#ff5370' } },
+  },
+  keyword: {
+    _settings: { foreground: '#c792ea' },
+    control: { _settings: { foreground: '#89ddff' } },
+    other: {
+      'special-method': { _settings: { foreground: '#82aaff' } },
+      substitution: { _settings: { foreground: '#89ddff' } },
+      template: { _settings: { foreground: '#89ddff' } },
+    },
+  },
+  markup: { deleted: { git_gutter: { _settings: { foreground: '#f07178' } } } },
+  meta: {
+    'function-call': { _settings: { foreground: '#82aaff' } },
+    tag: {
+      _settings: { foreground: '#89ddff' },
+      sgml: { _settings: { foreground: '#f07178' } },
+    },
+  },
+  punctuation: {
+    _settings: { foreground: '#89ddff' },
+    definition: {
+      comment: { _settings: { foreground: '#546e7a' } },
+      separator: { inheritance: { php: { _settings: { foreground: '#89ddff' } } } },
+      tag: {
+        _settings: { foreground: '#89ddff' },
+        begin: { html: { _settings: { foreground: '#89ddff' } } },
+        end: { html: { _settings: { foreground: '#89ddff' } } },
+        html: { _settings: { foreground: '#89ddff' } },
+      },
+    },
+    section: { embedded: { _settings: { foreground: '#89ddff' } } },
+  },
+  storage: {
+    modifier: { _settings: { foreground: '#c792ea' } },
+    type: { _settings: { foreground: '#c792ea' } },
+  },
+  string: { _sub: stringSub },
+  support: { 'function': { _settings: { foreground: '#82aaff' } } },
+  variable: {
+    _settings: { foreground: '#eeffff' },
+    'function': { _settings: { foreground: '#82aaff' } },
+  },
 };
 
 local temp = [
   {
-    name: 'Variables',
-    scope: ['variable', 'string constant.other.placeholder'],
-    settings: {
-      foreground: '#EEFFFF',
-    },
-  },
-  {
-    name: 'Colors',
-    scope: ['constant.other.color'],
-    settings: {
-      foreground: '#ffffff',
-    },
-  },
-  {
-    name: 'Invalid',
-    scope: ['invalid', 'invalid.illegal'],
-    settings: {
-      foreground: '#FF5370',
-    },
-  },
-  {
-    name: 'Keyword, Storage',
-    scope: ['keyword', 'storage.type', 'storage.modifier'],
-    settings: {
-      foreground: '#C792EA',
-    },
-  },
-  {
-    name: 'Operator, Misc',
-    scope: [
-      'keyword.control',
-      'constant.other.color',
-      'punctuation',
-      'meta.tag',
-      'punctuation.definition.tag',
-      'punctuation.separator.inheritance.php',
-      'punctuation.definition.tag.html',
-      'punctuation.definition.tag.begin.html',
-      'punctuation.definition.tag.end.html',
-      'punctuation.section.embedded',
-      'keyword.other.template',
-      'keyword.other.substitution',
-    ],
-    settings+: { foreground: '#89DDFF' },
-
-  },
-  {
-    name: 'Tag',
-    scope: [
-      'entity.name.tag',
-      'meta.tag.sgml',
-      'markup.deleted.git_gutter',
-    ],
-    settings+: { foreground: '#f07178' } +
-               {},
-  },
-  {
-    name: 'Function, Special Method',
-    scope: ['entity.name.function', 'meta.function-call', 'variable.function', 'support.function', 'keyword.other.special-method'],
-    settings: {
-      foreground: '#82AAFF',
-    },
-  },
-  {
     name: 'Block Level Variables',
     scope: ['meta.block variable.other'],
-    settings: {
-      foreground: '#f07178',
-    },
+    settings: { foreground: '#f07178' },
   },
   {
     name: 'Other Variable, String Link',
     scope: ['support.other.variable', 'string.other.link'],
-    settings: {
-      foreground: '#f07178',
-    },
+    settings: { foreground: '#f07178' },
   },
   {
     name: 'Number, Constant, Function Argument, Tag Attribute, Embedded',
@@ -286,9 +249,7 @@ local temp = [
       'keyword.other.unit',
       'keyword.other',
     ],
-    settings: {
-      foreground: '#F78C6C',
-    },
+    settings: { foreground: '#F78C6C' },
   },
   {
     name: 'String, Symbols, Inherited Class, Markup Heading',
@@ -301,9 +262,7 @@ local temp = [
       'markup.inserted.git_gutter',
       'meta.group.braces.curly constant.other.object.key.js string.unquoted.label.js',
     ],
-    settings: {
-      foreground: '#C3E88D',
-    },
+    settings: { foreground: '#C3E88D' },
   },
   {
     name: 'Class, Support',
@@ -374,10 +333,10 @@ local temp = [
   },
   {
     name: 'Attributes',
-    scope: ['entity.other.attribute-name'],
-    settings: {
-      foreground: '#C792EA',
-    },
+    scope: [
+      'entity.other.attribute-name',
+    ],
+    settings: { foreground+: '#C792EA' },
   },
   {
     name: 'HTML Attributes',
@@ -567,18 +526,14 @@ local temp = [
   {
     name: 'Markup - Italic',
     scope: ['markup.italic'],
-    settings: {
-      fontStyle: 'italic',
-      foreground: '#f07178',
-    },
+    settings+: { fontStyle: 'italic', foreground: '#f07178' } +
+               { foreground:: super.foreground },
   },
   {
     name: 'Markup - Bold',
     scope: ['markup.bold', 'markup.bold string'],
-    settings: {
-      fontStyle: 'bold',
-      foreground: '#f07178',
-    },
+    settings+: { fontStyle: 'bold', foreground: '#f07178' } +
+               { foreground:: super.foreground },
   },
   {
     name: 'Markup - Bold-Italic',
@@ -590,10 +545,8 @@ local temp = [
       'markup.italic markup.bold string',
       'markup.quote markup.bold string',
     ],
-    settings: {
-      fontStyle: 'bold',
-      foreground: '#f07178',
-    },
+    settings+: { fontStyle: 'bold', foreground: '#f07178' } +
+               { fontStyle: 'bold italic', foreground:: super.foreground },
   },
   {
     name: 'Markup - Underline',
@@ -620,16 +573,12 @@ local temp = [
   {
     name: 'Markdown - Link',
     scope: ['string.other.link.title.markdown'],
-    settings: {
-      foreground: '#82AAFF',
-    },
+    settings: { foreground: '#82AAFF' },
   },
   {
     name: 'Markdown - Link Description',
     scope: ['string.other.link.description.title.markdown'],
-    settings: {
-      foreground: '#C792EA',
-    },
+    settings: { foreground: '#C792EA' },
   },
   {
     name: 'Markdown - Link Anchor',
