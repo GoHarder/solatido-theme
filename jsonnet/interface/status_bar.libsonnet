@@ -70,14 +70,14 @@ local statusBarItem = {
   focusBorder: 'null',  // set with code default
 
   // Status Bar prominent items foreground color. {default: #ffffff}
-  prominentForeground: 'null',  // TODO: Set statusBarItem.prominentForeground
+  prominentForeground: pallet.background2,
 
   // Status Bar prominent items background color. {default: #00000080}
-  prominentBackground: 'null',  // TODO: Set statusBarItem.prominentBackground
+  prominentBackground: pallet.focus2,
 
   // Status Bar prominent items background color when hovering.
   // {default: #0000004d}
-  prominentHoverBackground: 'null',  // TODO: Set statusBarItem.prominentHoverBackground
+  prominentHoverBackground: 'null',  // NOTE: Can't find
 
   // Background color for the remote indicator on the status bar.
   // {default: #007acc}

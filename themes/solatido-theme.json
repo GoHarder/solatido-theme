@@ -248,6 +248,8 @@
       "statusBar.noFolderForeground": "#d0d0d080",
       "statusBarItem.errorBackground": "#000000",
       "statusBarItem.errorForeground": "#ff2828",
+      "statusBarItem.prominentBackground": "#50b9ff",
+      "statusBarItem.prominentForeground": "#121212",
       "statusBarItem.remoteBackground": "#444444",
       "statusBarItem.remoteForeground": "#ffffff",
       "statusBarItem.warningBackground": "#000000",
