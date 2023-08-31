@@ -22,7 +22,7 @@ local gitDecoration = {
   stageDeletedResourceForeground: pallet.red.base,
 
   // Color for modified Git resources. {default: #e2c08d}
-  modifiedResourceForeground: pallet.yellow.base,
+  modifiedResourceForeground: pallet.blue.base,
 
   // Color for staged modifications git decorations. {default: #e2c08d}
   stageModifiedResourceForeground: pallet.yellow.base,
