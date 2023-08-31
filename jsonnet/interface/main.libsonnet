@@ -31,7 +31,7 @@ local sections =
   // banner
   (import './extension.libsonnet') +
   (import './quick_picker.libsonnet') +
-  // keybinding_label
+  (import './keybinding_label.libsonnet') +
   // keyboard_shortcut_table
   (import './integrated_terminal.libsonnet') +
   (import './debug.libsonnet') +
