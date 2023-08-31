@@ -18,7 +18,7 @@ local sections =
   (import './editor.libsonnet') +
   (import './diff_editor.libsonnet') +
   (import './chat.libsonnet') +
-  // inline_chat
+  (import './inline_chat.libsonnet') +
   (import './editor_widget.libsonnet') +
   (import './peek_view.libsonnet') +
   // merge_conflicts
