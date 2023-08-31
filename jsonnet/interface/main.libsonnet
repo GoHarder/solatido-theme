@@ -42,7 +42,7 @@ local sections =
   // settings_editor
   (import './breadcrumbs.libsonnet') +
   // snippets
-  // symbol_icons
+  (import './symbol_icons.libsonnet') +
   (import './debug_icons.libsonnet') +
   // notebook
   // chart
