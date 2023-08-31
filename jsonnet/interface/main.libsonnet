@@ -29,7 +29,7 @@ local sections =
   (import './command_center.libsonnet') +
   (import './notification.libsonnet') +
   // banner
-  // extension
+  (import './extension.libsonnet') +
   (import './quick_picker.libsonnet') +
   // keybinding_label
   // keyboard_shortcut_table
