@@ -1,18 +1,17 @@
 local pallet = (import '../pallet.libsonnet');
 
-local temp = [
-  {  // NOTE: Comment done
+local default2 = [
+  {
     name: 'Comment',
     scope: ['comment', 'punctuation.definition.comment'],
-    settings+: { foreground: '#546E7A' } +
-               { foreground: pallet.mono108 },
+    settings: { foreground: '#546E7A' },
   },
   {
     name: 'Variables',
     scope: ['variable', 'string constant.other.placeholder'],
     settings: { foreground: '#EEFFFF' },
   },
-  {
+  {  // NOTE: This clashes with 'Operator, Misc'
     name: 'Colors',
     scope: ['constant.other.color'],
     settings: { foreground: '#ffffff' },
@@ -25,7 +24,7 @@ local temp = [
   {
     name: 'Keyword, Storage',
     scope: ['keyword', 'storage.type', 'storage.modifier'],
-    settings+: { foreground: '#C792EA' },
+    settings: { foreground: '#C792EA' },
   },
   {
     name: 'Operator, Misc',
@@ -43,18 +42,16 @@ local temp = [
       'keyword.other.template',
       'keyword.other.substitution',
     ],
-    settings+: { foreground: '#89DDFF' } +
-               { foreground: pallet.mono128 },
+    settings: { foreground: '#89DDFF' },
   },
-  {  // NOTE: Tag done
+  {
     name: 'Tag',
     scope: [
       'entity.name.tag',
       'meta.tag.sgml',
       'markup.deleted.git_gutter',
     ],
-    settings+: { foreground: '#f07178' } +
-               { foreground: pallet.tokens.blue2 },
+    settings: { foreground: '#f07178' },
   },
   {
     name: 'Function, Special Method',
@@ -176,8 +173,7 @@ local temp = [
     scope: [
       'entity.other.attribute-name',
     ],
-    settings: { foreground+: '#C792EA' } +
-              { foreground: pallet.tokens.blue1 },
+    settings: { foreground: '#C792EA' },
   },
   {
     name: 'HTML Attributes',
@@ -367,14 +363,14 @@ local temp = [
   {
     name: 'Markup - Italic',
     scope: ['markup.italic'],
-    settings+: { fontStyle: 'italic', foreground: '#f07178' } +
-               { foreground:: super.foreground },
+    settings: { fontStyle: 'italic', foreground: '#f07178' },
+
   },
   {
     name: 'Markup - Bold',
     scope: ['markup.bold', 'markup.bold string'],
-    settings+: { fontStyle: 'bold', foreground: '#f07178' } +
-               { foreground:: super.foreground },
+    settings: { fontStyle: 'bold', foreground: '#f07178' },
+
   },
   {
     name: 'Markup - Bold-Italic',
@@ -386,8 +382,7 @@ local temp = [
       'markup.italic markup.bold string',
       'markup.quote markup.bold string',
     ],
-    settings+: { fontStyle: 'bold', foreground: '#f07178' } +
-               { fontStyle: 'bold italic', foreground:: super.foreground },
+    settings: { fontStyle: 'bold', foreground: '#f07178' },
   },
   {
     name: 'Markup - Underline',
@@ -414,8 +409,8 @@ local temp = [
   {  // NOTE: Markdown link done
     name: 'Markdown - Link',
     scope: ['string.other.link.title.markdown'],
-    settings+: { foreground: '#82AAFF' } +
-               { foreground: pallet.tokens.blue1 },
+    settings: { foreground: '#82AAFF' },
+
   },
   {
     name: 'Markdown - Link Description',
@@ -481,7 +476,7 @@ local temp = [
   },
 ];
 
-[
+local default1 = [
   {
     scope: [
       'meta.embedded',
@@ -1047,4 +1042,34 @@ local temp = [
       foreground: '#B267E6',
     },
   },
-]
+];
+
+local theme = [
+  {
+    name: 'Tag Punctuation',
+    scope: 'punctuation.definition.tag',
+    settings: { foreground: pallet.mono128 },
+  },
+  {
+    name: 'Comment',
+    scope: ['comment', 'punctuation.definition.comment'],
+    settings: { foreground: pallet.mono128 },
+  },
+  {
+    name: 'Markup italic',
+    scope: ['markup.italic'],
+    settings: { fontStyle: 'italic' },
+  },
+  {
+    name: 'Markup bold',
+    scope: ['markup.bold'],
+    settings: { fontStyle: 'bold' },
+  },
+  {
+    name: 'Markup bold and italic',
+    scope: ['markup.bold markup.italic'],
+    settings: { fontStyle: 'italic bold' },
+  },
+];
+
+default1
