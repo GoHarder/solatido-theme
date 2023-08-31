@@ -286,6 +286,12 @@
       "toolbar.hoverBackground": "#76767650",
       "tree.tableColumnsBorder": "#ffffff20",
       "tree.tableOddRowsBackground": "#ffffff0a",
+      "walkThrough.embeddedEditorBackground": "#080808",
+      "welcomePage.progress.background": "#000000",
+      "welcomePage.progress.foreground": "#98bf66",
+      "welcomePage.tileBackground": "#080808",
+      "welcomePage.tileBorder": "#626262",
+      "welcomePage.tileHoverBackground": "#444444",
       "widget.border": "#444444"
    },
    "tokenColors": [

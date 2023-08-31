@@ -36,7 +36,7 @@ local sections =
   (import './integrated_terminal.libsonnet') +
   (import './debug.libsonnet') +
   // testing
-  // welcome_page
+  (import './welcome_page.libsonnet') +
   // source_control
   (import './git.libsonnet') +
   // settings_editor
