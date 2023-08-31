@@ -10,7 +10,7 @@ local terminal = {
 
   // The default foreground color of the Integrated Terminal.
   // {default: #cccccc}
-  foreground: 'null',  // TODO: Set terminal.foreground
+  foreground: pallet.foreground2,
 
   // 'Black' ANSI color in the terminal. {default: #000000}
   ansiBlack: 'null',  // set with code default
@@ -73,7 +73,7 @@ local terminal = {
 
   // 'BrightWhite' ANSI color in the terminal. {default: #e5e5e5}
   // ansiBrightWhite: pallet.ansiBrightWhite,
-  ansiBrightWhite: 'null',  // TODO: Set terminal.ansiBrightWhite
+  ansiBrightWhite: pallet.mono255,
 
   // The selection background color of the terminal. {default: #264f78}
   selectionBackground: 'null',  // {theme: #005994}
