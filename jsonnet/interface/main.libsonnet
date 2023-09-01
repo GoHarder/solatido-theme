@@ -28,7 +28,7 @@ local sections =
   (import './menu_bar.libsonnet') +
   (import './command_center.libsonnet') +
   (import './notification.libsonnet') +
-  // banner
+  (import './banner.libsonnet') +
   (import './extension.libsonnet') +
   (import './quick_picker.libsonnet') +
   (import './keybinding_label.libsonnet') +
