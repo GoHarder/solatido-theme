@@ -2,6 +2,29 @@
 
 # Change Log
 
+## 0.0.5
+
+### Patch Changes
+
+- Added extension section
+- Added peek view section
+- Added inline chat section
+- Added prominent colors to status bar
+- Added welcome page section
+- Changed git modified items from yellow to blue
+- Added symbol icons section
+- Added keybinding label section
+- Added white colors to terminal
+- Added testing section
+- Added banner section
+- Added settings editor section
+- Added source control section
+- Added keyboard shortcut table section
+- Added chart section
+- Added merge conflicts section
+- Added snippets section
+- Added notebook section
+
 ## 0.0.4
 
 ### Patch Changes
