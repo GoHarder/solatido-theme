@@ -45,7 +45,7 @@ local sections =
   (import './symbol_icons.libsonnet') +
   (import './debug_icons.libsonnet') +
   // notebook
-  // chart
+  (import './chart.libsonnet') +
   (import './ports.libsonnet') +
   (import './comments_view.libsonnet');
 
