@@ -32,7 +32,7 @@ local sections =
   (import './extension.libsonnet') +
   (import './quick_picker.libsonnet') +
   (import './keybinding_label.libsonnet') +
-  // keyboard_shortcut_table
+  (import './keyboard_shortcut_table.libsonnet') +
   (import './integrated_terminal.libsonnet') +
   (import './debug.libsonnet') +
   (import './testing.libsonnet') +
