@@ -41,7 +41,7 @@ local sections =
   (import './git.libsonnet') +
   (import './settings_editor.libsonnet') +
   (import './breadcrumbs.libsonnet') +
-  // snippets
+  (import './snippets.libsonnet') +
   (import './symbol_icons.libsonnet') +
   (import './debug_icons.libsonnet') +
   // notebook
