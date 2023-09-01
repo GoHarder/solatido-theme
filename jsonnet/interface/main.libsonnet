@@ -39,7 +39,7 @@ local sections =
   (import './welcome_page.libsonnet') +
   // source_control
   (import './git.libsonnet') +
-  // settings_editor
+  (import './settings_editor.libsonnet') +
   (import './breadcrumbs.libsonnet') +
   // snippets
   (import './symbol_icons.libsonnet') +
