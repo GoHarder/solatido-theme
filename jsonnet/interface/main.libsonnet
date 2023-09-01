@@ -21,7 +21,7 @@ local sections =
   (import './inline_chat.libsonnet') +
   (import './editor_widget.libsonnet') +
   (import './peek_view.libsonnet') +
-  // merge_conflicts
+  (import './merge_conflicts.libsonnet') +
   (import './panel.libsonnet') +
   (import './status_bar.libsonnet') +
   (import './title_bar.libsonnet') +
