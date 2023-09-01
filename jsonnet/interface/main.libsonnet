@@ -35,7 +35,7 @@ local sections =
   // keyboard_shortcut_table
   (import './integrated_terminal.libsonnet') +
   (import './debug.libsonnet') +
-  // testing
+  (import './testing.libsonnet') +
   (import './welcome_page.libsonnet') +
   // source_control
   (import './git.libsonnet') +
