@@ -2,6 +2,12 @@
 
 # Change Log
 
+## 0.0.6
+
+### Patch Changes
+
+- Fixed banner contrast bug
+
 ## 0.0.5
 
 ### Patch Changes

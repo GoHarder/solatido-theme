@@ -12,6 +12,7 @@
       "badge.background": "#121212",
       "badge.foreground": "#f8bd49",
       "banner.background": "#121212",
+      "banner.foreground": "#ffffff",
       "banner.iconForeground": "#f8bd49",
       "button.background": "#98bf66",
       "button.foreground": "#000000",

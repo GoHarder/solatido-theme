@@ -11,7 +11,7 @@ local banner = {
   background: pallet.background2,
 
   // Banner foreground color. {default: #ffffff}
-  foreground: 'null',  // set with code default
+  foreground: pallet.foreground1,
 
   // Color for the icon in front of the banner text. {default: #3794ff}
   iconForeground: pallet.yellow.base,
