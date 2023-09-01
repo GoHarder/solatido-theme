@@ -231,6 +231,7 @@
       "progressBar.background": "#f8bd49",
       "quickInputTitle.background": "#121212",
       "sash.hoverBorder": "#50b9ff",
+      "scm.providerBorder": "#444444",
       "scrollbar.shadow": "#44444433",
       "scrollbarSlider.activeBackground": "#6c6c6c80",
       "scrollbarSlider.background": "#6c6c6c33",
