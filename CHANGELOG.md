@@ -2,6 +2,16 @@
 
 # Change Log
 
+## 0.0.7
+
+### Patch Changes
+
+- Set breadcrumb focus colors
+- Reset keybinding labels to defaults
+- Set status bar offline status
+- Set debug state labels
+- Set some debug icon colors
+
 ## 0.0.6
 
 ### Patch Changes
