@@ -122,10 +122,10 @@ local terminal = {
 local terminalCursor = {
   // The background color of the terminal cursor. Allows customizing the
   // color of a character overlapped by a block cursor. {default: null}
-  background: 'null',  // TODO: Set terminalCursor.background
+  background: 'null',  // set with code default
 
   // The foreground color of the terminal cursor. {default: null}
-  foreground: 'null',  // TODO: Set terminalCursor.foreground
+  foreground: 'null',  // set with code default
 };
 
 local terminalCommandDecoration = {
