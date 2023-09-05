@@ -11,7 +11,7 @@ local debugToolBar = {
 local editor = {
   // Background color of the top stack frame highlight in the editor.
   // {default: #ffff0033}
-  stackFrameHighlightBackground: 'null',  // TODO: Set editor.stackFrameHighlightBackground
+  stackFrameHighlightBackground: pallet.yellow.base + pallet.opacity20_0,
 
   // Background color of the focused stack frame highlight in the editor.
   // {default: #7abd7a4d}
@@ -43,7 +43,7 @@ local debugView = {
 
   // Color used to highlight value changes in the debug views (such as in
   // the Variables view). {default: #569cd6}
-  valueChangedHighlight: 'null',  // TODO: Set debugView.valueChangedHighlight
+  valueChangedHighlight: pallet.yellow.base,
 };
 
 local debugTokenExpression = {
@@ -66,7 +66,7 @@ local debugTokenExpression = {
 
   // Foreground color for expression errors in debug views.
   // {default: #f48771}
-  'error': 'null',  // TODO: Set debugTokenExpression.error
+  'error': pallet['error'],
 };
 
 {

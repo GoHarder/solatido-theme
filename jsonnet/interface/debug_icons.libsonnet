@@ -2,19 +2,19 @@ local pallet = (import '../pallet.libsonnet');
 
 local debugIcon = {
   // Icon color for breakpoints. {default: #e51400}
-  breakpointForeground: 'null',  // TODO: Set debugIcon.breakpointForeground
+  breakpointForeground: pallet.red.base,
 
   // Icon color for disabled breakpoints. {default: #848484}
-  breakpointDisabledForeground: 'null',  // TODO: Set debugIcon.breakpointDisabledForeground
+  breakpointDisabledForeground: pallet.mono128,
 
   // Icon color for unverified breakpoints. {default: #848484}
-  breakpointUnverifiedForeground: 'null',  // TODO: Set debugIcon.breakpointUnverifiedForeground
+  breakpointUnverifiedForeground: pallet.mono128,
 
   // Icon color for the current breakpoint stack frame. {default: #ffcc00}
-  breakpointCurrentStackframeForeground: 'null',  // TODO: Set debugIcon.breakpointCurrentStackframeForeground
+  breakpointCurrentStackframeForeground: pallet.yellow.base,
 
   // Icon color for all breakpoint stack frames. {default: #89d185}
-  breakpointStackframeForeground: 'null',  // TODO: Set debugIcon.breakpointStackframeForeground
+  breakpointStackframeForeground: pallet.green.base,
 
   // Debug toolbar icon for start debugging. {default: #89d185}
   startForeground: pallet.green.base,
@@ -50,7 +50,7 @@ local debugIcon = {
 local debugConsole = {
   // Foreground color for info messages in debug REPL console.
   // {default: #3794ff}
-  infoForeground: 'null',  // {theme: #50b9ff}
+  infoForeground: pallet.foreground2,
 
   // Foreground color for warning messages in debug REPL console.
   // {default: #cca700}
