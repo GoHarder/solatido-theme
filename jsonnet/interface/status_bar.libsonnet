@@ -46,11 +46,11 @@ local statusBar = {
 
   // Status bar background color when the workbench is offline. The status
   // bar is shown in the bottom of the window. {default: #6c1717}
-  offlineBackground: 'null',  // TODO: Set statusBar.offlineBackground
+  offlineBackground: pallet.clear,
 
   // Status bar foreground color when the workbench is offline. The status
   // bar is shown in the bottom of the window. {default: #ffffff}
-  offlineForeground: 'null',  // TODO: Set statusBar.offlineForeground
+  offlineForeground: pallet['error'],
 };
 
 local statusBarItem = {
@@ -90,7 +90,7 @@ local statusBarItem = {
   // Status bar error items background color. Error items stand out from
   // other status bar entries to indicate error conditions.
   // {default: #c72e0f}
-  errorBackground: pallet.mono0,
+  errorBackground: pallet.clear,
 
   // Status bar error items foreground color. Error items stand out
   // from other status bar entries to indicate error conditions.
@@ -101,7 +101,7 @@ local statusBarItem = {
   // out from other status bar entries to indicate warning conditions.
   // The status bar is shown in the bottom of the window.
   // {default: #7a6400}
-  warningBackground: pallet.mono0,
+  warningBackground: pallet.clear,
 
   // Status bar warning items foreground color. Warning items stand
   // out from other status bar entries to indicate warning conditions.
