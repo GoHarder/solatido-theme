@@ -44,6 +44,8 @@
       "debugIcon.stopForeground": "#e75258",
       "debugToolBar.background": "#1c1c1c",
       "debugToolBar.border": "#444444",
+      "debugView.stateLabelBackground": "#1c1c1c",
+      "debugView.stateLabelForeground": "#50b9ff",
       "descriptionForeground": "#d0d0d0b3",
       "diffEditor.border": "#444444",
       "diffEditor.diagonalFill": "#bcbcbc33",

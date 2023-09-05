@@ -35,11 +35,11 @@ local debugView = {
 
   // Foreground color for a label in the CALL STACK view showing the current
   // session's or thread's state. {default: #cccccc}
-  stateLabelForeground: 'null',  // TODO: Set debugView.stateLabelForeground
+  stateLabelForeground: pallet.focus2,
 
   // Background color for a label in the CALL STACK view showing the current
   // session's or thread's state. {default: #88888844}
-  stateLabelBackground: 'null',  // TODO: Set debugView.stateLabelBackground
+  stateLabelBackground: pallet.background3,
 
   // Color used to highlight value changes in the debug views (such as in
   // the Variables view). {default: #569cd6}
