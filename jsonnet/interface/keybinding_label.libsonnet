@@ -18,16 +18,16 @@ local keybindingLabel = {
   // NOTE: The keybinding label is used to represent a keyboard shortcut
 
   // Keybinding label background color. {default: #8080802b}
-  background: '#2d2d2d',
+  background: 'null',  // set with code default
 
   // Keybinding label foreground color. {default: #cccccc}
   foreground: 'null',  // {theme: #d0d0d0}
 
   // Keybinding label border color. {default: #33333399}
-  border: '#2a2a2a',
+  border: 'null',  // set with code default
 
   // Keybinding label border bottom color. {default: #44444499}
-  bottomBorder: '#343434',
+  bottomBorder: 'null',  // set with code default
 };
 
 {
