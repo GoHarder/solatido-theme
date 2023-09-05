@@ -13,12 +13,10 @@ local breadcrumb = {
   background: 'null',  // {theme: #1c1c1c}
 
   // Color of focused breadcrumb items. {default: #e0e0e0}
-  // focusForeground: pallet.foreground1,
-  focusForeground: 'null',  // TODO: Set breadcrumb.focusForeground
+  focusForeground: pallet.foreground1,
 
   // Color of selected breadcrumb items. {default: #e0e0e0}
-  // activeSelectionForeground: pallet.foreground2,
-  activeSelectionForeground: 'null',  // TODO: Set breadcrumb.activeSelectionForeground
+  activeSelectionForeground: pallet.foreground1,
 };
 
 local breadcrumbPicker = {
