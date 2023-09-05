@@ -50,19 +50,19 @@ local debugIcon = {
 local debugConsole = {
   // Foreground color for info messages in debug REPL console.
   // {default: #3794ff}
-  infoForeground: 'null',  // TODO: Set debugConsole.infoForeground
+  infoForeground: 'null',  // {theme: #50b9ff}
 
   // Foreground color for warning messages in debug REPL console.
   // {default: #cca700}
-  warningForeground: 'null',  // TODO: Set debugConsole.warningForeground
+  warningForeground: 'null',  // {theme: #f8bd49}
 
   // Foreground color for error messages in debug REPL console.
   // {default: #f48771}
-  errorForeground: 'null',  // TODO: Set debugConsole.errorForeground
+  errorForeground: 'null',  // {theme: #ff2828}
 
   // Foreground color for source filenames in debug REPL console.
   // {default: #cccccc}
-  sourceForeground: 'null',  // TODO: Set debugConsole.sourceForeground
+  sourceForeground: 'null',  // {theme: #d0d0d0}
 };
 
 local debugConsoleInputIcon = {
