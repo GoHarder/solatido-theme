@@ -2,6 +2,16 @@
 
 # Change Log
 
+## 0.0.8
+
+### Patch Changes
+
+- Added diff editor move border
+- Updated theme changes in visual studio code release 1.82.0
+- Added terminal command decorations
+- Added status bar hover colors
+- Adjusted git colors
+
 ## 0.0.7
 
 ### Patch Changes
