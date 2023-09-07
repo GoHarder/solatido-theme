@@ -16,7 +16,7 @@ local diffEditor = {
 
   // The border color for text that got moved in the diff editor.
   // {default: #8b8b8b9c}
-  move: { border: 'null' },  // TODO: Set diffEditor.move.border
+  move: { border: pallet.yellow.base + pallet.opacity61_2 },
 
   // Background color for text that got inserted. The color must not be
   // opaque so as not to hide underlying decorations. {default: #9ccc2c33}

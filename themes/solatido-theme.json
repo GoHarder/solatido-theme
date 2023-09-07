@@ -59,6 +59,7 @@
       "diffEditor.diagonalFill": "#bcbcbc33",
       "diffEditor.insertedLineBackground": "#45681329",
       "diffEditor.insertedTextBackground": "#45681329",
+      "diffEditor.move.border": "#f8bd499c",
       "diffEditor.removedLineBackground": "#b12a3529",
       "diffEditor.removedTextBackground": "#b12a3529",
       "diffEditor.unchangedCodeBackground": "#121212",
