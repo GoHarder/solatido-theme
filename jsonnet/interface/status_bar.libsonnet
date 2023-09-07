@@ -43,14 +43,6 @@ local statusBar = {
   // Status bar border color when focused on keyboard navigation. The status
   // bar is shown in the bottom of the window. {default: #ffffff}
   focusBorder: pallet.border2,
-
-  // Status bar background color when the workbench is offline. The status
-  // bar is shown in the bottom of the window. {default: #6c1717}
-  offlineBackground: pallet.clear,
-
-  // Status bar foreground color when the workbench is offline. The status
-  // bar is shown in the bottom of the window. {default: #ffffff}
-  offlineForeground: pallet['error'],
 };
 
 local statusBarItem = {
@@ -87,6 +79,12 @@ local statusBarItem = {
   // {default: #ffffff}
   remoteForeground: pallet.foreground1,
 
+  // Added in release 1.82.0
+  remoteHoverBackground: pallet.focus2,
+
+  // Added in release 1.82.0
+  remoteHoverForeground: pallet.background2,
+
   // Status bar error items background color. Error items stand out from
   // other status bar entries to indicate error conditions.
   // {default: #c72e0f}
@@ -96,6 +94,12 @@ local statusBarItem = {
   // from other status bar entries to indicate error conditions.
   // {default: #ffffff}
   errorForeground: pallet['error'],
+
+  // Added in release 1.82.0
+  errorHoverBackground: pallet['error'],
+
+  // Added in release 1.82.0
+  errorHoverForeground: pallet.background2,
 
   // Status bar warning items background color. Warning items stand
   // out from other status bar entries to indicate warning conditions.
@@ -108,6 +112,26 @@ local statusBarItem = {
   // The status bar is shown in the bottom of the window.
   // {default: #ffffff}
   warningForeground: pallet.warning,
+
+  // Added in release 1.82.0
+  warningHoverBackground: pallet.warning,
+
+  // Added in release 1.82.0
+  warningHoverForeground: pallet.background2,
+
+  // Status bar background color when the workbench is offline. The status
+  // bar is shown in the bottom of the window. {default: #6c1717}
+  offlineBackground: pallet.clear,
+
+  // Status bar foreground color when the workbench is offline. The status
+  // bar is shown in the bottom of the window. {default: #ffffff}
+  offlineForeground: pallet['error'],
+
+  // Added in release 1.82.0
+  offlineHoverBackground: pallet['error'],
+
+  // Added in release 1.82.0
+  offlineHoverForeground: pallet.background2,
 };
 
 {
@@ -134,6 +158,14 @@ local statusBarItem = {
   'statusBarItem.compactHoverBackground': statusBarItem.compactHoverBackground,
   'statusBarItem.focusBorder': statusBarItem.focusBorder,
   'statusBar.focusBorder': statusBar.focusBorder,
-  'statusBar.offlineBackground': statusBar.offlineBackground,
-  'statusBar.offlineForeground': statusBar.offlineForeground,
+  'statusBarItem.offlineBackground': statusBarItem.offlineBackground,
+  'statusBarItem.offlineForeground': statusBarItem.offlineForeground,
+  'statusBarItem.remoteHoverBackground': statusBarItem.remoteHoverBackground,
+  'statusBarItem.remoteHoverForeground': statusBarItem.remoteHoverForeground,
+  'statusBarItem.errorHoverBackground': statusBarItem.errorHoverBackground,
+  'statusBarItem.errorHoverForeground': statusBarItem.errorHoverForeground,
+  'statusBarItem.offlineHoverBackground': statusBarItem.offlineHoverBackground,
+  'statusBarItem.offlineHoverForeground': statusBarItem.offlineHoverForeground,
+  'statusBarItem.warningHoverBackground': statusBarItem.warningHoverBackground,
+  'statusBarItem.warningHoverForeground': statusBarItem.warningHoverForeground,
 }
