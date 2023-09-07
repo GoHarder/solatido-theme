@@ -47,15 +47,18 @@ local statusBar = {
 
 local statusBarItem = {
   // Status Bar item background color when clicking. {default: #ffffff2e}
-  activeBackground: 'null',  // set with code default
+  activeBackground: pallet.green.base,
 
   // Status Bar item background color when hovering. {default: #ffffff1f}
-  hoverBackground: 'null',  // set with code default
+  hoverBackground: pallet.border2,
+
+  // Don't know where this one was
+  hoverForeground: pallet.foreground1,
 
   // Status bar item background color when hovering an item that
   // contains two hovers. The status bar is shown in the bottom of
   // the window. {default: #ffffff33}
-  compactHoverBackground: 'null',  // set with code default
+  compactHoverBackground: pallet.green.sub3,
 
   // Status bar item border color when focused on keyboard navigation. The
   // status bar is shown in the bottom of the window. {default: #ffffff}
@@ -146,6 +149,7 @@ local statusBarItem = {
   'statusBar.noFolderBorder': statusBar.noFolderBorder,
   'statusBarItem.activeBackground': statusBarItem.activeBackground,
   'statusBarItem.hoverBackground': statusBarItem.hoverBackground,
+  'statusBarItem.hoverForeground': statusBarItem.hoverForeground,
   'statusBarItem.prominentForeground': statusBarItem.prominentForeground,
   'statusBarItem.prominentBackground': statusBarItem.prominentBackground,
   'statusBarItem.prominentHoverBackground': statusBarItem.prominentHoverBackground,
