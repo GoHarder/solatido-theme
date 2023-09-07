@@ -135,13 +135,11 @@ local terminalCommandDecoration = {
 
   // The terminal command decoration background color for successful
   // commands. {default: #1b81a8}
-  // successBackground: pallet.green1.base,
-  successBackground: 'null',  // TODO: Set terminalCommandDecoration.successBackground
+  successBackground: pallet.green.base,
 
   // The terminal command decoration background color for error commands.
   // {default: #f14c4c}
-  // errorBackground: pallet.red1.base,
-  errorBackground: 'null',  // TODO: Set terminalCommandDecoration.errorBackground
+  errorBackground: pallet['error'],
 };
 
 local terminalOverviewRuler = {
