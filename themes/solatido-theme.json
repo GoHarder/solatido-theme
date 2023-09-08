@@ -33,6 +33,7 @@
       "commandCenter.border": "#444444",
       "commandCenter.inactiveBorder": "#444444",
       "debugConsole.infoForeground": "#d0d0d0",
+      "debugConsole.sourceForeground": "#50b9ff",
       "debugIcon.breakpointCurrentStackframeForeground": "#f8bd49",
       "debugIcon.breakpointDisabledForeground": "#808080",
       "debugIcon.breakpointForeground": "#e75258",

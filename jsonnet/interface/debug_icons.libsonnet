@@ -62,7 +62,7 @@ local debugConsole = {
 
   // Foreground color for source filenames in debug REPL console.
   // {default: #cccccc}
-  sourceForeground: 'null',  // {theme: #d0d0d0}
+  sourceForeground: pallet.focus2,  // {theme: #d0d0d0}
 };
 
 local debugConsoleInputIcon = {
