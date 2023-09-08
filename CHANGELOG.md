@@ -2,6 +2,13 @@
 
 # Change Log
 
+## 0.0.9
+
+### Patch Changes
+
+- Set debug console source to blue
+- Set notebook colors
+
 ## 0.0.8
 
 ### Patch Changes
