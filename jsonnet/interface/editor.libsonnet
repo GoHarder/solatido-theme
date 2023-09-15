@@ -227,11 +227,11 @@ local editorUnicodeHighlight = {
   // --------------------------------
 
   // Border color used to highlight unicode characters. {default: #bd9b03}
-  border: 'null',  // TODO: editorUnicodeHighlight.border
+  border: pallet.yellow.base,
 
   // Background color used to highlight unicode characters.
   // {default: #bd9b0326}
-  background: 'null',  // TODO: editorUnicodeHighlight.background
+  background: pallet.yellow.base + pallet.opacity14_9,
 };
 
 local editorLink = {
