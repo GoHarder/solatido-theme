@@ -294,7 +294,7 @@ local editorCodeLens = {
   // NOTE: Example image available.
 
   // Foreground color of an editor CodeLens. {default: #999999}
-  foreground: 'null',  // TODO: Set editorCodeLens.foreground
+  foreground: pallet.mono108,
 };
 
 local editorLightBulb = {
