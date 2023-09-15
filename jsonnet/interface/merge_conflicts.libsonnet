@@ -67,46 +67,34 @@ local editorOverviewRuler = {
 local mergeEditor = {
   change: {
     // The background color for changes. {default: #9bb95533}
-    background: 'null',  // TODO: Set mergeEditor.change.background
+    background: pallet.yellow.base + pallet.opacity20_0,
 
-    word: {
-      // The background color for word changes. {default: #9ccc2c33}
-      background: 'null',  // TODO: Set mergeEditor.change.word.background
-    },
+    // The background color for word changes. {default: #9ccc2c33}
+    word: { background: pallet.yellow.base + pallet.opacity20_0 },
   },
 
   conflict: {
-    unhandledUnfocused: {
-      // The border color of unhandled unfocused conflicts.
-      // {default: #ffa6007a}
-      border: 'null',  // TODO: Set mergeEditor.conflict.unhandledUnfocused.border
-    },
+    // The border color of unhandled unfocused conflicts.
+    // {default: #ffa6007a}
+    unhandledUnfocused: { border: pallet.yellow.base + pallet.opacity47_8 },
 
-    unhandledFocused: {
-      // The border color of unhandled focused conflicts. {default: #ffa600}
-      border: 'null',  // TODO: Set mergeEditor.conflict.unhandledFocused.border
-    },
+    // The border color of unhandled focused conflicts. {default: #ffa600}
+    unhandledFocused: { border: pallet.yellow.base },
 
-    handledUnfocused: {
-      // The border color of handled unfocused conflicts.
-      // {default: #86868649}
-      border: 'null',  // TODO: Set mergeEditor.conflict.handledUnfocused.border
-    },
+    // The border color of handled unfocused conflicts.
+    // {default: #86868649}
+    handledUnfocused: { border: pallet.mono128 + pallet.opacity28_6 },
 
-    handledFocused: {
-      // The border color of handled focused conflicts. {default: #c1c1c1cc}
-      border: 'null',  // TODO: Set mergeEditor.conflict.handledFocused.border
-    },
+    // The border color of handled focused conflicts. {default: #c1c1c1cc}
+    handledFocused: { border: pallet.mono188 + pallet.opacity80_0 },
 
+    // The foreground color for changes in input 1. {default: #adaca8ee}
     handled: {
-      // The foreground color for changes in input 1. {default: #adaca8ee}
-      minimapOverViewRuler: 'null',  // TODO: Set mergeEditor.conflict.handled.minimapOverViewRuler
+      minimapOverViewRuler: 'null',  // NOTE: Can't find
     },
 
-    unhandled: {
-      // The foreground color for changes in input 1. {default: #fcba03}
-      minimapOverViewRuler: 'null',  // TODO: Set mergeEditor.conflict.unhandled.minimapOverViewRuler
-    },
+    // The foreground color for changes in input 1. {default: #fcba03}
+    unhandled: { minimapOverViewRuler: pallet.yellow.base },
 
     input1: {
       // The background color of decorations in input 1.
