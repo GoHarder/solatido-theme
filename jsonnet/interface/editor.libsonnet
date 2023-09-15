@@ -284,7 +284,7 @@ local editorRuler = {
   // ----------------------------------------------------------------
 
   // Color of the editor rulers. {default: #5a5a5a}
-  foreground: 'null',  // TODO: Set editorRuler.foreground
+  foreground: 'null',  // set with code default
 };
 
 local editorCodeLens = {
@@ -425,7 +425,7 @@ local editorOverviewRuler = {
   // Overview ruler marker color for selection highlights. The color must
   // not be opaque so as not to hide underlying decorations.
   // {default: #a0a0a0cc}
-  selectionHighlightForeground: 'null',  // TODO: Set editorOverviewRuler.selectionHighlightForeground
+  selectionHighlightForeground: 'null',  // set with code default
 
   // Overview ruler marker color for symbol highlights. The color must not
   // be opaque so as not to hide underlying decorations.
@@ -461,7 +461,7 @@ local editorOverviewRuler = {
   infoForeground: 'null',  // {theme: #50b9ff}
 
   // Overview ruler marker color for matching brackets. {default: #a0a0a0}
-  bracketMatchForeground: 'null',  // TODO: Set editorOverviewRuler.bracketMatchForeground
+  bracketMatchForeground: 'null',  // set with code default
 };
 
 local editorError = {
