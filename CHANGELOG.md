@@ -2,6 +2,15 @@
 
 # Change Log
 
+## 0.0.10
+
+### Patch Changes
+
+- Added status bar background to hover widget
+- Added unicode highlighting to editor
+- Set code lens foreground
+- Other settings set to dark theme default
+
 ## 0.0.9
 
 ### Patch Changes
