@@ -79,7 +79,7 @@ local editorHoverWidget = {
   highlightForeground: 'null',  // {theme: #50b9ff}
 
   // Background color of the editor hover status bar. {default: #2c2c2d}
-  statusBarBackground: 'null',  // TODO: Set editorHoverWidget.statusBarBackground
+  statusBarBackground: pallet.background2,
 };
 
 local editorGhostText = {
