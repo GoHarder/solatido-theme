@@ -1,11 +1,11 @@
-local pallet = (import '../pallet.libsonnet');
+local color = (import '../colors.libsonnet');
 
 local badge = {
-  // Badge foreground color. {default: #ffffff}
-  foreground: pallet.yellow.base,
+  // Badge foreground color.
+  foreground: color.onTertiary,
 
-  // Badge background color. {default: #4d4d4d}
-  background: pallet.background2,
+  // Badge background color.
+  background: color.tertiary,
 };
 
 {

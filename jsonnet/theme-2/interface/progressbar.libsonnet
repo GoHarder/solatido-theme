@@ -1,9 +1,8 @@
-local pallet = (import '../pallet.libsonnet');
+local color = (import '../colors.libsonnet');
 
 local progressBar = {
   // Background color of the progress bar shown for long running operations.
-  // {default: #0e70c0}
-  background: pallet.yellow.base,
+  background: color.primary,
 };
 
 local keys = ['progressBar.background'];
