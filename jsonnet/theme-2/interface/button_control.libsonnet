@@ -4,43 +4,43 @@
 // the Explorer of a new window.
 // ----------------------------------------------------------------
 
-local pallet = (import '../pallet.libsonnet');
+local color = (import '../colors.libsonnet');
 
 local button = {
-  // Button foreground color. {default: #ffffff}
-  foreground: pallet.mono0,
+  // Button foreground color.
+  foreground: color.onPrimary,
 
-  // Button background color. {default: #0e639c}
-  background: pallet.green.base,
+  // Button background color.
+  background: color.primary,
 
-  // Button background color when hovering. {default: #1177bb}
-  hoverBackground: pallet.green.sub2,
+  // Button background color when hovering.
+  hoverBackground: color.primaryHover,
 
-  // Secondary button foreground color. {default: #ffffff}
-  secondaryForeground: pallet.mono0,
+  // Secondary button foreground color.
+  secondaryForeground: color.onSecondaryContainer,
 
-  // Secondary button background color. {default: #3a3d41}
-  secondaryBackground: pallet.mono198,
+  // Secondary button background color.
+  secondaryBackground: color.secondaryContainer,
 
-  // Secondary button background color when hovering. {default: #45494e}
-  secondaryHoverBackground: pallet.mono208,
+  // Secondary button background color when hovering.
+  secondaryHoverBackground: color.secondaryContainerHover,
 
-  // Button border color. {default: null}
-  border: 'null',  // set with code default
+  // Button border color.
+  border: 'null',  // Done
 
-  // Button separator color. {default: #ffffff66}
-  separator: pallet.mono0,
+  // Button separator color.
+  separator: color.onPrimary,
 };
 
 local checkbox = {
-  // Background color of checkbox widget. {default: #3c3c3c}
-  background: pallet.background2,
+  // Background color of checkbox widget.
+  background: '#00000000',
 
-  // Foreground color of checkbox widget. {default: #f0f0f0}
-  foreground: pallet.green.base,
+  // Foreground color of checkbox widget.
+  foreground: color.onSurface,
 
-  // Border color of checkbox widget. {default: #3c3c3c}
-  border: pallet.border3,
+  // Border color of checkbox widget.
+  border: color.onSurfaceVariant,
 
   // Background color of checkbox widget when the element it's in is
   // selected. {default: #252526}
@@ -48,7 +48,7 @@ local checkbox = {
 
   // Border color of checkbox widget when the element it's in is selected.
   // {default: #c5c5c5}
-  selectBorder: 'null',  // {theme: #d0d0d0}
+  selectBorder: 'null',  // NOTE: Can't find
 };
 
 {

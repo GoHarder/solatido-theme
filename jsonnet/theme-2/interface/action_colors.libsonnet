@@ -4,20 +4,17 @@
 // the workbench.
 // ---------------------------------------------------------------
 
-local pallet = (import '../pallet.libsonnet');
+local color = (import '../colors.libsonnet');
 
 local toolbar = {
   // Toolbar background when hovering over actions using the mouse.
-  // {default: #5a5d5e50}
-  hoverBackground: pallet.mono118 + pallet.opacity31_4,
+  hoverBackground: color.onSurfaceVariant + color.opacity08,
 
   // Toolbar outline when hovering over actions using the mouse.
-  // {default: null}
-  hoverOutline: 'null',  // set with code default
+  hoverOutline: 'null',
 
   // Toolbar background when holding the mouse over actions.
-  // {default: #63666750}
-  activeBackground: pallet.mono128 + pallet.opacity31_4,
+  activeBackground: color.secondaryContainer,
 };
 {
   'toolbar.hoverBackground': toolbar.hoverBackground,
