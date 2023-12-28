@@ -5,20 +5,20 @@
 // not used on macOS currently.
 // ------------------------------------------------------------------
 
-local pallet = (import '../pallet.libsonnet');
+local color = (import '../colors.libsonnet');
 
 local dropdown = {
-  // Dropdown background. {default: #3c3c3c}
-  background: pallet.background2,
+  // Dropdown background.
+  background: '#00000000',
 
-  // Dropdown list background. {default: null}
-  listBackground: pallet.background3,
+  // Dropdown list background.
+  listBackground: color.surfaceContainer,
 
-  // Dropdown border. {default: #3c3c3c}
-  border: pallet.border3,
+  // Dropdown border.
+  border: color.outline,
 
-  // Dropdown foreground. {default: #f0f0f0}
-  foreground: pallet.foreground1,
+  // Dropdown foreground.
+  foreground: color.onSurfaceVariant,
 };
 
 {

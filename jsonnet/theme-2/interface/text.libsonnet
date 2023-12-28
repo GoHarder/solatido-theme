@@ -3,38 +3,37 @@
 // Colors inside a text document, such as the welcome page.
 // --------------------------------------------------------
 
-local pallet = (import '../pallet.libsonnet');
+local color = (import '../colors.libsonnet');
 
 local textBlockQuote = {
-  // Background color for block quotes in text. {default: #7f7f7f1a}
-  background: pallet.mono38,
+  // Background color for block quotes in text.
+  background: color.surfaceContainer,
 
-  // Border color for block quotes in text. {default: #007acc80}
-  border: pallet.border2,
+  // Border color for block quotes in text.
+  border: color.outlineVariant,
 };
 
 local textCodeBlock = {
-  // Background color for code blocks in text. {default: #0a0a0a66}
-  background: pallet.mono18,
+  // Background color for code blocks in text.
+  background: color.surfaceContainer,
 };
 
 local textLink = {
   // Foreground color for links in text when clicked on and on mouse hover.
-  // {default: #3794ff}
-  activeForeground: pallet.blue.sub2,
+  activeForeground: color.primaryHover,
 
-  // Foreground color for links in text. {default: #3794ff}
-  foreground: pallet.blue.base,
+  // Foreground color for links in text.
+  foreground: color.primary,
 };
 
 local textPreformat = {
-  // Foreground color for preformatted text segments. {default: #d7ba7d}
-  foreground: pallet.yellow.base,
+  // Foreground color for preformatted text segments.
+  foreground: color.tertiary,
 };
 
 local textSeparator = {
   // Color for text separators. {default: #ffffff2e}
-  foreground: 'null',  // NOTE: Can't find. I think its the underline under markdown headers
+  foreground: 'null',  // NOTE: Can't find.
 };
 
 {

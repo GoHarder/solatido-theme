@@ -1,20 +1,20 @@
-local pallet = (import '../pallet.libsonnet');
+local color = (import '../colors.libsonnet');
 
 local titleBar = {
-  // Title Bar background when the window is active. {default: #3c3c3c}
-  activeBackground: pallet.background2,
+  // Title Bar background when the window is active.
+  activeBackground: color.surfaceContainerHigh,
 
-  // Title Bar foreground when the window is active. {default: #cccccc}
-  activeForeground: pallet.foreground2,
+  // Title Bar foreground when the window is active.
+  activeForeground: color.onSurface,
 
-  // Title Bar background when the window is inactive. {default: #3c3c3c99}
-  inactiveBackground: pallet.background2,
+  // Title Bar background when the window is inactive.
+  inactiveBackground: color.surfaceContainerHigh,
 
-  // Title Bar foreground when the window is inactive. {default: #cccccc99}
-  inactiveForeground: pallet.inactiveForeground2,
+  // Title Bar foreground when the window is inactive.
+  inactiveForeground: color.onSurfaceVariant,
 
   // Title bar border color. code {default: null}
-  border: pallet.border2,
+  border: 'null',  // Done
 };
 
 {
